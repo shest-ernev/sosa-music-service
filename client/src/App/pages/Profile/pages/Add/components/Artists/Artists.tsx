@@ -25,12 +25,20 @@ const Artists: FC = observer(() => {
                   key={obj._id}
                   avatar={obj.avatar}
                   name={obj.name}
-                  onDelete={() => delArtist(obj._id)}
+                  onDelete={() => {
+                     if (obj._id !== undefined) {
+                        delArtist(obj._id)
+                     }
+                  }}
                />
             ))}
             <AddArtist
                arr={artists}
-               onDel={(artist) => delArtist(artist._id)}
+               onDel={(artist) => {
+                  if (artist._id !== undefined) {
+                     delArtist(artist._id)
+                  }
+               }}
                className={style.addInput}
                onAdd={(artist) => {
                   if (artist._id === user._id) return

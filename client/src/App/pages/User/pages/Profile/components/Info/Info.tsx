@@ -11,7 +11,6 @@ import SubsSvg from 'assets/svg/SubsSvg'
 import PlaySvg from 'assets/svg/PlaySvg'
 import LikeSvg from 'assets/svg/LikeSvg'
 import CopySvg from 'assets/svg/CopySvg'
-import ErrorSvg from 'assets/svg/ErrorSvg'
 
 import style from './Info.module.scss'
 
