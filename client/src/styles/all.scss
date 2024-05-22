@@ -1,0 +1,62 @@
+@import './fonts.scss';
+@import './vars.scss';
+@import './global.scss';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   font-family: var(--font);
+   color: var(--text);
+   -webkit-tap-highlight-color: transparent;
+   transition: all 0.2s;
+   -webkit-transition: all 0.2s;
+   -moz-transition: all 0.2s;
+   -o-transition: all 0.2s;
+
+   &::placeholder {
+      font-size: var(--size);
+      color: #7c7c7c;
+   }
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+input,
+button,
+textarea {
+   border: none;
+   background: none;
+   resize: none;
+}
+
+html {
+   background-color: #000000;
+}
+
+// для хрома и подобных браузеров пускай будет.
+::-webkit-scrollbar {
+   width: 5px;
+   height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 100px;
+   background-color: #bdbdbd;
+}
+
+::-webkit-scrollbar-track {
+   margin: 10px 0;
+}

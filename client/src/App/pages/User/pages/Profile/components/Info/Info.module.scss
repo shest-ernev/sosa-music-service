@@ -1,0 +1,164 @@
+.info {
+   width: 100%;
+   display: flex;
+   margin: 10px 0 30px 0;
+   border-radius: var(--border);
+   background-position: center;
+   background-size: cover;
+}
+
+.cntr {
+   width: 100%;
+   display: flex;
+   align-items: flex-end;
+   border-radius: var(--border);
+}
+
+.coverCntr {
+   background: #000000;
+   background: linear-gradient(0deg, #000000 0%, #00000071 100%, #00000000 100%);
+   padding: 20px;
+}
+
+.cover {
+   height: 370px;
+   position: relative;
+}
+
+.avatar {
+   width: 200px;
+   height: 200px;
+   margin-right: 20px;
+}
+
+.infoLinks {
+   display: flex;
+   flex-direction: column;
+}
+
+.name {
+   font-size: 35px;
+   font-weight: 700;
+   color: var(--title);
+   margin-bottom: 5px;
+}
+
+.subs {
+   width: max-content;
+   padding: 5px 15px;
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   background-color: var(--default-btn);
+
+   svg {
+      width: var(--size);
+      height: var(--size);
+      margin-right: 10px;
+
+      path {
+         stroke: var(--svg);
+      }
+   }
+
+   p {
+      font-size: var(--size);
+   }
+}
+
+.actions {
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   gap: 10px;
+}
+
+.play {
+   height: 35px;
+   padding: 0 15px;
+   border-radius: 30px;
+
+   svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+
+      path {
+         fill: #000000;
+      }
+   }
+
+   p {
+      font-size: var(--size);
+      color: #000000;
+   }
+}
+
+.like {
+   width: 35px;
+   height: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   flex-shrink: 0;
+
+   svg {
+      width: 50%;
+      height: 50%;
+
+      path {
+         fill: var(--svg);
+      }
+   }
+}
+
+.likeActive {
+   svg {
+      path {
+         fill: var(--danger);
+      }
+   }
+}
+
+.dropboard {
+   width: 35px;
+   height: 35px;
+   flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+   .cntr {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .name {
+      font-size: 30px;
+   }
+
+   .cover {
+      height: max-content;
+   }
+
+   .dropboard {
+      align-items: flex-end;
+   }
+
+   .infoLinks {
+      width: 100%;
+      align-items: center;
+   }
+
+   .avatar {
+      margin-bottom: 30px;
+   }
+
+   .actions {
+      width: 100%;
+   }
+
+   .play {
+      width: 100%;
+   }
+}

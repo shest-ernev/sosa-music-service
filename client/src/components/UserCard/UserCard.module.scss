@@ -1,0 +1,97 @@
+.userCard {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 10px;
+   padding: 10px;
+}
+
+.user {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   width: 100%;
+}
+
+.avatar {
+   width: 70px;
+   height: 70px;
+   margin-right: 20px;
+}
+
+.userText {
+   display: flex;
+   flex-direction: column;
+
+   p:nth-child(1) {
+      font-size: var(--size);
+      color: var(--title);
+      font-weight: 700;
+   }
+
+   p:nth-child(2) {
+      font-size: 17px;
+   }
+}
+
+.actions {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   flex-shrink: 0;
+   margin-left: 20px;
+}
+
+.like {
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+
+   svg {
+      width: 50%;
+      height: 50%;
+
+      path {
+         fill: var(--svg);
+      }
+   }
+}
+
+.likeActive {
+   svg {
+      path {
+         fill: var(--danger);
+      }
+   }
+}
+
+.dropboard {
+   width: 35px;
+   height: 35px;
+   align-items: flex-end;
+}
+
+@media (max-width: 400px) {
+   .like {
+      width: 30px;
+      height: 30px;
+   }
+
+   .dropboard {
+      width: 30px;
+      height: 30px;
+   }
+
+   .avatar {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+   }
+
+   .userText {
+      p:nth-child(2) {
+         font-size: 15px;
+      }
+   }
+}

@@ -1,0 +1,138 @@
+.info{
+   width: 100%;
+   height: max-content;
+   display: flex;
+   align-items: flex-end;
+   gap: 20px;
+}
+
+.cover{
+   width: 300px;
+   border-radius: 10px;
+   flex-shrink: 0;
+}
+
+.infoText{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.genres{
+   font-size: 16;
+}
+
+.name{
+   width: 100%;
+   font-size: 35px;
+   font-weight: 700;
+   color: var(--title);
+   margin-bottom: 5px;
+}
+
+.artists{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin-bottom: 20px;
+}
+
+.actions{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.play{
+   height: 35px;
+   padding: 0 15px;
+   border-radius: 30px;
+
+   svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+
+      path {
+         fill: #000000;
+      }
+   }
+
+   p {
+      font-size: var(--size);
+      color: #000000;
+   }
+}
+
+.like{
+   height: 35px;
+   padding: 0 15px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   border-radius: 20px;
+
+   p{
+      font-size: var(--size);
+   }
+
+   svg{
+      width: 50%;
+      height: 50%;
+
+      *[fill]{
+         fill: var(--svg);
+      }
+
+      *[stroke]{
+         stroke: var(--svg);
+      }
+   }
+}
+
+.likeActive{
+   svg{
+      *[fill]{
+         fill: var(--danger);
+      }
+   }
+}
+
+.dropboard{
+   width: 35px;
+   height: 35px;
+}
+
+@media (max-width: 720px) {
+   .dropboard{
+      align-items: flex-end;
+   }
+}
+
+@media (max-width: 650px) {
+   .info{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .cover{
+      width: 100%;
+   }
+
+   .actions{
+      width: 100%;
+   }
+
+   .play{
+      width: 100%;
+   }
+
+   .like{
+      flex-shrink: 0;
+   }
+
+   .dropboard{
+      flex-shrink: 0;
+   }
+}

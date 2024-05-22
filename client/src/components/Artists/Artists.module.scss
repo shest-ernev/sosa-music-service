@@ -1,0 +1,25 @@
+.artists {
+   width: 100%;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   font-size: var(--size);
+}
+
+.artist {
+   width: 100%;
+   font-size: 17px;
+   position: relative;
+
+   @media (hover: hover) {
+      &:hover {
+         color: var(--primary-color);
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         color: var(--primary-color);
+      }
+   }
+}

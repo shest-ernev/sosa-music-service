@@ -1,0 +1,19 @@
+.artists {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.btn {
+   height: 40px;
+   border-radius: 20px;
+   font-size: var(--size);
+   padding: 0 15px;
+}
+
+@media (max-width: 500px) {
+   .addInput {
+      width: 100%;
+   }
+}

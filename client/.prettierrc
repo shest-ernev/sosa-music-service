@@ -1,0 +1,13 @@
+{
+   "bracketSameLine": false,
+   "bracketSpacing": true,
+   "endOfLine": "auto",
+   "tabWidth": 3,
+   "printWidth": 130,
+   "semi": false,
+   "quoteProps": "consistent",
+   "singleQuote": true,
+   "jsxSingleQuote": true,
+   "arrowParens": "always",
+   "singleAttributePerLine": true
+}

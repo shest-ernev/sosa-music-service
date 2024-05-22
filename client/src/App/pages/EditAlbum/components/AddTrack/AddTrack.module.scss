@@ -1,0 +1,84 @@
+.musics {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 20px;
+}
+
+.info {
+   height: 35px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.upload {
+   width: 220px;
+   height: 35px;
+   border-radius: 30px;
+   padding: 0 15px;
+
+   svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+
+      path {
+         stroke: var(--svg);
+      }
+   }
+
+   p {
+      width: 100%;
+      font-size: var(--size);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
+}
+
+.name {
+   width: 200px;
+   font-size: var(--size);
+   color: var(--title);
+}
+
+.artists {
+   width: 100%;
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+.save {
+   width: 200px;
+   height: 35px;
+   border-radius: 30px;
+   color: #000000;
+   font-size: var(--size);
+}
+
+@media (max-width: 450px) {
+   .info{
+      display: flex;
+      flex-direction: column-reverse;
+      height: max-content;
+   }
+
+   .upload{
+      width: 100%;
+   }
+   
+   .name{
+      width: 100%;
+   }
+
+   .save{
+      width: 100%;
+   }
+
+   .addArtist{
+      width: 100%;
+   }
+}

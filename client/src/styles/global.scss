@@ -1,0 +1,54 @@
+.hover {
+   @media (hover: hover) {
+      &:hover {
+         background-color: #ffffff08;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         background-color: #ffffff08;
+      }
+   }
+}
+
+.titleLink{
+   font-size: 24px;
+   color: var(--title);
+   margin-right: 7px;
+   font-weight: 700;
+
+   @media (hover: hover) {
+      &:hover{
+         color: var(--primary-color);
+      }
+   }
+
+   @media (hover: none) {
+      &:active{
+         color: var(--primary-color);
+      }
+   }
+}
+
+.a {
+   color: var(--primary-color);
+
+   @media (hover: hover) {
+      &:hover {
+         text-shadow: 0px 0px 10px #ffc14f79;
+         -webkit-text-shadow: 0px 0px 10px #ffc14f79;
+         -moz-text-shadow: 0px 0px 10px #ffc14f79;
+         -o-text-shadow: 0px 0px 10px #ffc14f79;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         text-shadow: 0px 0px 10px #ffc14f79;
+         -webkit-text-shadow: 0px 0px 10px #ffc14f79;
+         -moz-text-shadow: 0px 0px 10px #ffc14f79;
+         -o-text-shadow: 0px 0px 10px #ffc14f79;
+      }
+   }
+}

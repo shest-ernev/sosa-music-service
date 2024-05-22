@@ -1,0 +1,63 @@
+.item {
+   display: flex;
+   position: relative;
+   background-color: var(--bg-block);
+   border-radius: 50px;
+   overflow: hidden;
+}
+
+.hover:hover {
+   .delete {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+   }
+}
+
+.info {
+   padding: 5px 15px 5px 5px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   cursor: default;
+
+   p {
+      color: var(--size);
+   }
+}
+
+.avatar {
+   width: 30px;
+   height: 30px;
+}
+
+.login {
+   cursor: pointer;
+}
+
+.delete {
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+   position: absolute;
+   border-radius: 50px;
+   bottom: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--bg-opacity);
+   backdrop-filter: blur(var(--bg-blur));
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+
+   svg {
+      width: 18px;
+      height: 18px;
+
+      path {
+         stroke: var(--danger);
+      }
+   }
+}

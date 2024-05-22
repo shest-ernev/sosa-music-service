@@ -1,0 +1,183 @@
+.error {
+   input {
+      border-color: var(--danger) !important;
+   }
+}
+
+.errorCheckbox {
+   border-color: var(--danger) !important;
+}
+
+.inputText {
+   display: flex;
+   align-items: center;
+   position: relative;
+
+   input {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-input);
+      border: 1px solid #242424;
+      border-radius: 10px;
+      padding: 0 13px;
+      font-size: var(--size);
+      color: var(--title);
+
+      &:focus {
+         border-color: var(--primary-color);
+         background-color: #131313;
+      }
+   }
+
+   svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 13px;
+
+      *[stroke] {
+         stroke: var(--svg);
+      }
+
+      *[fill] {
+         fill: var(--svg);
+      }
+   }
+}
+
+.inputPass {
+   display: flex;
+   align-items: center;
+   position: relative;
+
+   input {
+      width: 100%;
+      height: 100%;
+      background-color: #1c1c1c;
+      border: 1.7px solid #242424;
+      border-radius: 10px;
+      padding: 0 43px 0 11px;
+      font-size: var(--size);
+      color: var(--title);
+
+      &:focus {
+         border-color: var(--primary-color);
+         background-color: #131313;
+      }
+   }
+
+   button {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 13px;
+      cursor: pointer;
+
+      svg {
+         width: 100%;
+         height: 100%;
+
+         path {
+            stroke: var(--svg);
+         }
+      }
+   }
+}
+
+.svg {
+   input {
+      padding-left: 43px;
+   }
+}
+
+.checkbox {
+   width: max-content;
+   height: max-content;
+   display: flex;
+
+   input {
+      display: none;
+   }
+}
+
+.customCheckbox {
+   cursor: pointer;
+   background-color: #1c1c1c;
+   border: 1px solid #242424;
+   border-radius: 7px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   svg {
+      width: 55%;
+      height: 55%;
+      visibility: hidden;
+      opacity: 0;
+
+      path {
+         stroke: #000000;
+      }
+   }
+
+   @media (hover: hover) {
+      &:hover {
+         background-color: #242424;
+         border-color: #242424;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         background-color: #0d0d0d;
+         border-color: #0d0d0d;
+      }
+   }
+}
+
+.checkboxInput:checked + .customCheckbox {
+   background-color: var(--primary-color);
+   border-color: var(--primary-color);
+
+   svg {
+      visibility: visible;
+      opacity: 1;
+   }
+}
+
+.range{
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   appearance: none;
+   position: relative;
+   overflow: hidden;
+
+   input{
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      cursor: pointer;
+   }
+}
+
+.lineCntr{
+   width: 100%;
+   height: 100%;
+   background-color: var(--bg-input);
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+}
+
+.line{
+   height: 100%;
+   background-color: #ffffff;
+   border-radius: 30px;
+   transition: none;
+   -webkit-transition: none;
+   -moz-transition: none;
+   -o-transition: none;
+}

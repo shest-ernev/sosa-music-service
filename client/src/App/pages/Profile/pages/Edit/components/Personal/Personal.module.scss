@@ -1,0 +1,42 @@
+.form {
+   width: 100%;
+   background-color: var(--bg-block);
+   border-radius: var(--border);
+   padding: var(--padding);
+}
+
+.formTitle {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+
+   p:nth-child(1) {
+      font-size: 20px;
+      color: var(--title);
+   }
+
+   p:nth-child(2) {
+      font-size: 16px;
+   }
+}
+
+.input {
+   height: 45px;
+   width: 100%;
+   margin-bottom: 3px;
+}
+
+.help {
+   font-size: 14px;
+   color: var(--danger);
+   margin-bottom: 13px;
+}
+
+.btn {
+   width: 100%;
+   height: 40px;
+   border-radius: var(--border);
+   color: #000000;
+   font-size: var(--size);
+   margin-top: 25px;
+}

@@ -1,0 +1,17 @@
+.profile {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 0px 20px 20px 20px;
+   gap: 20px;
+}
+
+.none {
+   font-size: var(--size);
+}
+
+@media (max-width: 500px) {
+   .cntr {
+      padding: 0 10px 10px 10px 10px;
+   }
+}

@@ -1,0 +1,23 @@
+.textarea {
+   height: max-content;
+   display: flex;
+   position: relative;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   position: relative;
+   transition: none;
+   -webkit-transition: none;
+   -moz-transition: none;
+   -o-transition: none;
+
+   textarea {
+      width: 100%;
+      font-size: var(--size);
+      overflow: hidden;
+
+      &::placeholder {
+         font-size: var(--size);
+      }
+   }
+}

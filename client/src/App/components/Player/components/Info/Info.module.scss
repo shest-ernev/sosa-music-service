@@ -1,0 +1,119 @@
+.info {
+   width: 250px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   gap: 10px;
+}
+
+.cntr{
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.infoText {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+.artists {
+   width: 100%;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   font-size: var(--size);
+}
+
+.artist {
+   font-size: 16px;
+   cursor: pointer;
+
+   @media (hover: hover) {
+      &:hover {
+         color: var(--primary-color);
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         color: var(--primary-color);
+      }
+   }
+}
+
+.name {
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 19px;
+   color: var(--title);
+   margin-bottom: -4px;
+   text-align: start;
+   cursor: pointer;
+
+   @media (hover: hover) {
+      &:hover {
+         color: var(--primary-color);
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         color: var(--primary-color);
+      }
+   }
+}
+
+.cover {
+   height: 100%;
+   border-radius: 7px;
+   overflow: hidden;
+   cursor: pointer;
+   position: relative;
+   flex-shrink: 0;
+   overflow: hidden;
+
+   img{
+      width: 100%;
+      height: 100%;
+   }
+
+   &:hover{
+      .maximize{
+         visibility: visible;
+         opacity: 1;
+      }
+   }
+}
+
+.maximize{
+   width: 100%;
+   height: 100%;
+   border-radius: 7px;
+   position: absolute;
+   background-color: var(--bg-opacity);
+   backdrop-filter: blur(var(--bg-blur));
+   visibility: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   top: 0;
+   left: 0;
+
+   svg{
+      width: 50%;
+      height: 50%;
+
+      path{
+         stroke: var(--svg);
+      }
+   }
+}

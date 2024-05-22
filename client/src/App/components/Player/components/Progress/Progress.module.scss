@@ -1,0 +1,29 @@
+.progress {
+   width: 100%;
+   height: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   position: relative;
+
+   p {
+      font-size: 15px;
+      flex-shrink: 0;
+   }
+
+   p:nth-child(1) {
+      position: absolute;
+      left: 0;
+   }
+
+   p:nth-child(3) {
+      position: absolute;
+      right: 0;
+   }
+}
+
+.range {
+   width: 70%;
+   height: 9px;
+}

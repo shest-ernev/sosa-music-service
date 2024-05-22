@@ -1,0 +1,82 @@
+.cntr {
+   width: 100%;
+   height: 100dvh;
+   display: flex;
+   position: fixed;
+   left: 0;
+   top: 0;
+   overflow-y: auto;
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+   z-index: 11;
+   background-color: var(--bg-opacity);
+   backdrop-filter: blur(var(--bg-blur));
+   padding: 20px;
+}
+
+.open {
+   visibility: visible;
+   opacity: 1;
+   pointer-events: all;
+}
+
+.modal {
+   width: 450px;
+   height: max-content;
+   margin: auto;
+   padding: var(--padding);
+   background-color: var(--bg-block);
+   border-radius: var(--border);
+   display: flex;
+   flex-direction: column;
+}
+
+.title {
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   margin-bottom: var(--padding);
+
+   p {
+      font-size: var(--size);
+      color: var(--title);
+   }
+
+   button {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+         width: 45%;
+         height: 45%;
+
+         path {
+            stroke: var(--svg);
+         }
+      }
+   }
+}
+
+.content {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.confirm {
+   height: 35px;
+   border-radius: var(--border);
+   width: max-content;
+   padding: 0 15px;
+   color: #000000;
+   align-self: flex-end;
+   font-size: var(--size);
+   margin-top: var(--padding);
+}

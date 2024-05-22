@@ -1,0 +1,30 @@
+.tracks{
+   display: flex;
+   flex-direction: column;
+}
+
+.link{
+   width: max-content;
+   margin-bottom: 5px;
+   font-size: 22px;
+   font-weight: 700;
+   color: var(--title);
+
+   @media (hover: hover) {
+      &:hover{
+         color: var(--primary-color);
+      }
+   }
+
+   @media (hover: none) {
+      &:active{
+         color: var(--primary-color);
+      }
+   }
+}
+
+.cntr{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}

@@ -1,0 +1,77 @@
+.main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--primary-color);
+   cursor: pointer;
+
+   & .loader {
+      circle {
+         stroke: #000000ae;
+      }
+   }
+
+   @media (hover: hover) {
+      &:hover {
+         background-color: var(--primary-color-hover);
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         background-color: var(--primary-color-hover);
+      }
+   }
+}
+
+.default {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--default-btn);
+   cursor: pointer;
+
+   & .loader {
+      circle {
+         stroke: var(--svg);
+      }
+   }
+
+   @media (hover: hover) {
+      &:hover {
+         background-color: var(--default-btn-hover);
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         background-color: var(--default-btn-hover);
+      }
+   }
+}
+
+.danger {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #ff5353;
+   cursor: pointer;
+
+   & .loader {
+      circle {
+         stroke: #000000ae;
+      }
+   }
+
+   @media (hover: hover) {
+      &:hover {
+         background-color: #ff3434;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         background-color: #ff3434;
+      }
+   }
+}

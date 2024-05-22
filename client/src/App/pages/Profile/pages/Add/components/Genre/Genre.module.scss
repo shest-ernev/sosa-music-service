@@ -1,0 +1,19 @@
+.item {
+   border-radius: 20px;
+   padding: 7px 15px 7px 7px;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   background-color: var(--bg-block);
+   font-size: var(--size);
+   cursor: pointer;
+   user-select: none;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+}
+
+.checkbox {
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+}
