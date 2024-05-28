@@ -51,10 +51,16 @@ cd client
 ```bash
 npm install
 ```
+```bash
+yarn
+```
 
 3. Запускаем клиент командой:
 ```bash
 npm run dev
+```
+```bash
+yarn dev
 ```
 
 4. В терминале выведится такое сообщение:
@@ -80,10 +86,16 @@ cd server
 ```bash
 npm install
 ```
+```bash
+yarn
+```
 
 3. Запускаем сервер командой:
 ```bash
 npm run dev
+```
+```bash
+yarn dev
 ```
 
 4. Не много подождите, в терминале должно вывестись такое сообщение:
