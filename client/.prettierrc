@@ -8,6 +8,7 @@
    "quoteProps": "consistent",
    "singleQuote": true,
    "jsxSingleQuote": true,
+   "jsxBracketSameLine": true,
    "arrowParens": "always",
    "singleAttributePerLine": true
 }
