@@ -1,11 +1,12 @@
 import { unlink } from 'fs'
 
+import { config } from '../../../config.js'
 import User from '../../../models/User.js'
 
 const setAvatar = async (req, res) => {
    try {
       if (!!req.user.avatar) {
-         unlink(req.user.avatar.replace('http://localhost:8001', 'public'), (err) => {
+         unlink(req.user.avatar.replace(config.url, 'public'), (err) => {
             if (err) {
                console.log(err)
             }
@@ -14,7 +15,7 @@ const setAvatar = async (req, res) => {
 
       await User.findOneAndUpdate(
          { _id: req.user._id },
-         { avatar: `http://localhost:8001/users/avatars/${req.file.filename}` },
+         { avatar: `${config.url}/users/avatars/${req.file.filename}` },
          { new: true }
       ).then((doc) => {
          return res.status(200).json({

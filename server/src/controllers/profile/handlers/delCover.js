@@ -1,5 +1,6 @@
 import { unlink } from 'fs'
 
+import { config } from '../../../config.js'
 import User from '../../../models/User.js'
 
 const delCover = async (req, res) => {
@@ -11,7 +12,7 @@ const delCover = async (req, res) => {
       }
 
       if (!!req.user.cover) {
-         unlink(req.user.cover.replace('http://localhost:8001', 'public'), (err) => {
+         unlink(req.user.cover.replace(config.url, 'public'), (err) => {
             if (err) {
                return res.status(404).json({
                   msg: 'Файл обложки не найден',

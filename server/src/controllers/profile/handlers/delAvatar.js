@@ -1,5 +1,6 @@
 import { unlink } from 'fs'
 
+import { config } from '../../../config.js'
 import User from '../../../models/User.js'
 
 const delAvatar = async (req, res) => {
@@ -11,7 +12,7 @@ const delAvatar = async (req, res) => {
       }
 
       if (!!req.user.avatar) {
-         unlink(req.user.avatar.replace('http://localhost:8001', 'public'), (err) => {
+         unlink(req.user.avatar.replace(config.url, 'public'), (err) => {
             if (err) {
                return res.status(404).json({
                   msg: 'Файл аватарки не найден',

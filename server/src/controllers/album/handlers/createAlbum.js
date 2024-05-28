@@ -1,6 +1,7 @@
 import { validationResult } from 'express-validator'
 import moment from 'moment'
 
+import { config } from '../../../config.js'
 import Album from '../../../models/Album.js'
 
 const createAlbum = async (req, res) => {
@@ -30,7 +31,7 @@ const createAlbum = async (req, res) => {
       const doc = new Album({
          user: req.user._id,
          name: name.trim(),
-         cover: `http://localhost:8001/albums/${req.file.filename}`,
+         cover: `${config.url}/albums/${req.file.filename}`,
          genres: genres,
          artists: artists.map((obj) => obj._id),
          year: Number(moment().format('YYYY')),

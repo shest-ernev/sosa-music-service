@@ -1,5 +1,6 @@
 import { unlink } from 'fs'
 
+import { config } from '../../../config.js'
 import Album from '../../../models/Album.js'
 
 const setCover = async (req, res) => {
@@ -21,7 +22,7 @@ const setCover = async (req, res) => {
       }
 
       if (!!album.cover) {
-         unlink(album.cover.replace('http://localhost:8001', 'public'), (err) => {
+         unlink(album.cover.replace(config.url, 'public'), (err) => {
             if (err) {
                console.log(err)
             }
@@ -30,7 +31,7 @@ const setCover = async (req, res) => {
 
       await Album.findOneAndUpdate(
          { _id: id },
-         { cover: `http://localhost:8001/albums/${req.file.filename}` },
+         { cover: `${config.url}/albums/${req.file.filename}` },
          { new: true }
       ).then((doc) => {
          return res.status(200).json({

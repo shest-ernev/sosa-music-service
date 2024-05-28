@@ -1,5 +1,6 @@
 import { unlink } from 'fs'
 
+import { config } from '../../../config.js'
 import Track from '../../../models/Track.js'
 
 const delTrack = async (req, res) => {
@@ -21,7 +22,7 @@ const delTrack = async (req, res) => {
       }
 
       if (!!track.file) {
-         unlink(track.file.replace('http://localhost:8001', 'public'), (err) => {
+         unlink(track.file.replace(config.url, 'public'), (err) => {
             if (err) {
                return res.status(404).json({
                   msg: 'Файл трека не найден',

@@ -1,5 +1,6 @@
 import { validationResult } from 'express-validator'
 
+import { config } from '../../../config.js'
 import Track from '../../../models/Track.js'
 import Album from '../../../models/Album.js'
 
@@ -32,7 +33,7 @@ const addTrack = async (req, res) => {
 
       const doc = new Track({
          album: album._id,
-         file: `http://localhost:8001/tracks/${req.file.filename}`,
+         file: `${config.url}/tracks/${req.file.filename}`,
          name: name.trim(),
          artists: artists.map((obj) => obj._id),
          duration,
