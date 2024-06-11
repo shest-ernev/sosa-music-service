@@ -7,7 +7,6 @@ import CloseSvg from 'assets/svg/CloseSvg'
 import Button from 'ui/Button'
 import SongControll from '../SongControll'
 import Progress from '../Progress'
-import Volume from '../Volume'
 
 import style from './Full.module.scss'
 
@@ -27,8 +26,7 @@ const Full: FC<FullProps> = observer(({ onClose, audio, open }) => {
          <Button
             onClick={onClose}
             className={style.close}
-            design='default'
-         >
+            design='default'>
             <CloseSvg />
          </Button>
          <div className={style.controller}>
@@ -40,8 +38,7 @@ const Full: FC<FullProps> = observer(({ onClose, audio, open }) => {
                <Link
                   className={style.name}
                   to={`/album/${track.album._id}`}
-                  onClick={onClose}
-               >
+                  onClick={onClose}>
                   {track.name}
                </Link>
                <p className={style.artists}>
@@ -52,8 +49,7 @@ const Full: FC<FullProps> = observer(({ onClose, audio, open }) => {
                               <Link
                                  className={style.artist}
                                  onClick={onClose}
-                                 to={`/user/${obj.login}/profile`}
-                              >
+                                 to={`/user/${obj.login}/profile`}>
                                  {obj.name},{' '}
                               </Link>
                            </span>
@@ -64,8 +60,7 @@ const Full: FC<FullProps> = observer(({ onClose, audio, open }) => {
                               <Link
                                  className={style.artist}
                                  onClick={onClose}
-                                 to={`/user/${obj.login}/profile`}
-                              >
+                                 to={`/user/${obj.login}/profile`}>
                                  {obj.name}
                               </Link>
                            </span>
@@ -78,7 +73,6 @@ const Full: FC<FullProps> = observer(({ onClose, audio, open }) => {
                <SongControll />
             </div>
             <Progress audio={audio} />
-            <Volume className={style.volume} />
          </div>
       </div>
    )

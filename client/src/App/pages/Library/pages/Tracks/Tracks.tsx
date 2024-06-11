@@ -4,7 +4,7 @@ import qs from 'qs'
 
 import { useLocalStore } from './useLocalStore'
 import { useRootStore } from 'hooks/useRootStore'
-import Track from 'components/Track'
+import TrackCard from 'entities/TrackCard'
 import Input from 'ui/Input'
 import Loader from 'ui/Loader'
 import LupaSvg from 'assets/svg/LupaSvg'
@@ -16,7 +16,9 @@ const Tracks: FC = observer(() => {
 
    const library = useLocalStore()
 
-   const { player: { start, currentAudio, trackList, setPlay, play } } = useRootStore()
+   const {
+      player: { start, currentAudio, trackList, setPlay, play },
+   } = useRootStore()
 
    const track = trackList[currentAudio]
 
@@ -32,7 +34,7 @@ const Tracks: FC = observer(() => {
 
    return (
       <div className={style.tracks}>
-         <Input 
+         <Input
             className={style.input}
             placeholder='Найти трек...'
             onChange={(event) => setSearch(event.target.value)}
@@ -41,23 +43,23 @@ const Tracks: FC = observer(() => {
          />
          <div className={style.items}>
             {library.tracks.map((obj, index) => (
-               <Track 
-               key={obj._id}
-               album={obj.album}
-               artists={obj.artists}
-               name={obj.name}
-               like={obj.like}
-               loading={obj.loading}
-               duration={obj.duration}
-               onLike={() => library.setLike(obj._id)}
-               play={track?._id === obj._id}
-               onPlay={() => {
-                  if (track?._id === obj._id) {
-                     setPlay(!play)
-                  } else {
-                     start(index, library.tracks)
-                  }
-               }}
+               <TrackCard
+                  key={obj._id}
+                  album={obj.album}
+                  artists={obj.artists}
+                  name={obj.name}
+                  like={obj.like}
+                  loading={obj.loading}
+                  duration={obj.duration}
+                  onLike={() => library.setLike(obj._id)}
+                  play={track?._id === obj._id}
+                  onPlay={() => {
+                     if (track?._id === obj._id) {
+                        setPlay(!play)
+                     } else {
+                        start(index, library.tracks)
+                     }
+                  }}
                />
             ))}
          </div>

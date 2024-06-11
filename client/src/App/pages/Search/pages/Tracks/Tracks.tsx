@@ -6,7 +6,7 @@ import qs from 'qs'
 import { useLocalStore } from './useLocalStore'
 import { useRootStore } from 'hooks/useRootStore'
 import Trigger from 'components/Trigger'
-import Track from 'components/Track'
+import TrackCard from 'entities/TrackCard'
 import api from 'config/api'
 
 import style from './Tracks.module.scss'
@@ -16,7 +16,7 @@ const Tracks: FC = observer(() => {
 
    const {
       filter: { search, setSearch },
-      player: { start, currentAudio, trackList, setPlay, play }
+      player: { start, currentAudio, trackList, setPlay, play },
    } = useRootStore()
 
    const tracks = useLocalStore()
@@ -52,7 +52,7 @@ const Tracks: FC = observer(() => {
    return (
       <div className={style.tarcks}>
          {tracks.items.map((obj, index) => (
-            <Track
+            <TrackCard
                key={obj._id}
                album={obj.album}
                artists={obj.artists}

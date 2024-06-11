@@ -2,28 +2,25 @@ import { FC } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Navigation } from 'swiper/modules'
 
-import { Album as AlbumType  } from 'types/models/album'
-import Album from 'components/Album'
+import { Album as AlbumType } from 'types/models/album'
+import Album from 'entities/Album'
 import Button from 'ui/Button'
 import ArrowLeftSvg from 'assets/svg/ArrowLeftSvg'
 
 import style from './Relizes.module.scss'
 
 type RelizesProps = {
-   albums: Pick<AlbumType, '_id' | 'name' | 'cover' | 'artists' | 'published' | 'admin' >[]
+   albums: Pick<AlbumType, '_id' | 'name' | 'cover' | 'artists' | 'published' | 'admin'>[]
 }
 
 const Relizes: FC<RelizesProps> = ({ albums }) => {
    return (
       <div className={style.albums}>
-         <p className={style.title}>
-            Релизы
-         </p>
+         <p className={style.title}>Релизы</p>
          <div className={style.cntr}>
             <Button
                className={`${style.btn} ${style.btnPrev}`}
-               design='default'
-            >
+               design='default'>
                <ArrowLeftSvg />
             </Button>
             <Swiper
@@ -35,15 +32,13 @@ const Relizes: FC<RelizesProps> = ({ albums }) => {
                cssMode={true}
                navigation={{
                   prevEl: `.${style.btnPrev}`,
-                  nextEl: `.${style.btnNext}`
-               }}
-            >
+                  nextEl: `.${style.btnNext}`,
+               }}>
                {albums.map((obj) => (
                   <SwiperSlide
                      key={obj._id}
-                     className={style.slide}
-                  >
-                     <Album 
+                     className={style.slide}>
+                     <Album
                         className={style.album}
                         _id={obj._id}
                         name={obj.name}
@@ -57,8 +52,7 @@ const Relizes: FC<RelizesProps> = ({ albums }) => {
             </Swiper>
             <Button
                className={`${style.btn} ${style.btnNext}`}
-               design='default'
-            >
+               design='default'>
                <ArrowLeftSvg />
             </Button>
          </div>

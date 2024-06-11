@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite'
 
 import { useRootStore } from 'hooks/useRootStore'
 import PrevPage from 'components/PrevPage'
-import Track from 'components/Track'
+import TrackCard from 'entities/TrackCard'
 
 import style from './Tracks.module.scss'
 
@@ -20,7 +20,7 @@ const Tracks: FC = observer(() => {
          <PrevPage title='Ваши треки' />
          <div className={style.cntr}>
             {tracks.map((obj, index) => (
-               <Track
+               <TrackCard
                   key={obj._id}
                   album={obj.album}
                   artists={obj.artists}

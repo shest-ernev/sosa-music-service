@@ -7,7 +7,7 @@ import qs from 'qs'
 import { useRootStore } from 'hooks/useRootStore'
 import { useLocalStore } from './useLocalStore'
 import Trigger from 'components/Trigger'
-import Album from 'components/Album'
+import Album from 'entities/Album'
 import api from 'config/api'
 import Filter from './components/Filter'
 

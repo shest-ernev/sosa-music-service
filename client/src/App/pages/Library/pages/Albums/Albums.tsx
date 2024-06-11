@@ -7,7 +7,7 @@ import { useLocalStore } from './useLocalStore'
 import Input from 'ui/Input'
 import LupaSvg from 'assets/svg/LupaSvg'
 import api from 'config/api'
-import Album from 'components/Album'
+import Album from 'entities/Album'
 import Trigger from 'components/Trigger'
 
 import style from './Albums.module.scss'

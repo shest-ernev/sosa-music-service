@@ -7,7 +7,7 @@ import { useLocalStore } from './useLocalStore'
 import Input from 'ui/Input'
 import LupaSvg from 'assets/svg/LupaSvg'
 import Trigger from 'components/Trigger'
-import UserCard from 'components/UserCard'
+import UserCard from 'entities/UserCard'
 import api from 'config/api'
 import Alert from 'ui/Alert'
 
@@ -83,7 +83,7 @@ const Users: FC = observer(() => {
                />
             </div>
          </div>
-         <Alert 
+         <Alert
             type='text'
             open={copy}
             onClose={() => setCopy(false)}

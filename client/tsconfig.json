@@ -24,6 +24,7 @@
          "store": ["store/*"],
          "types": ["types/*"],
          "ui": ["ui/*"],
+         "entities": ["entities/*"],
          "App": ["App/*"]
       }
    },

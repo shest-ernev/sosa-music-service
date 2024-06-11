@@ -7,7 +7,7 @@ import { useRootStore } from 'hooks/useRootStore'
 import { useLocalStore } from './useLocalStore'
 import api from 'config/api'
 import Alert from 'ui/Alert'
-import UserCard from 'components/UserCard'
+import UserCard from 'entities/UserCard'
 import Trigger from 'components/Trigger'
 
 import style from './Users.module.scss'

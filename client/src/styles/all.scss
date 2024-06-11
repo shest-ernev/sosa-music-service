@@ -46,17 +46,18 @@ html {
    background-color: #000000;
 }
 
-// для хрома и подобных браузеров пускай будет.
-::-webkit-scrollbar {
-   width: 5px;
-   height: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-   border-radius: 100px;
-   background-color: #bdbdbd;
-}
-
-::-webkit-scrollbar-track {
-   margin: 10px 0;
+@media (hover: hover) {
+   ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+   }
+   
+   ::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      background-color: #bdbdbd;
+   }
+   
+   ::-webkit-scrollbar-track {
+      margin: 10px 0;
+   }
 }
