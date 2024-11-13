@@ -113,5 +113,4 @@ DB ok
 
 
 Если какие то проблемы обращайтесь ко мне:
-- [ТГ](https://t.me/so_sa300)
-- [ВК](https://vk.com/so_sa300)
+- [ТГ](https://t.me/sosa_aa)
